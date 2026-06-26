@@ -5,7 +5,7 @@ from openai import OpenAI
 
 print("start")
 print("GROQ:", os.getenv("GRQO_API_KEY"))
-print("TOKEN:",s os.getenv("TELEGRAM_BOT_TOKEN"))
+print("TOKEN:", os.getenv("TELEGRAM_BOT_TOKEN"))
 
 
 client = OpenAI(
