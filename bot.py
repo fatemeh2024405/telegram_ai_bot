@@ -1,9 +1,10 @@
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="bot_token",
+    api_key=os.getenv("GROQ_API_KEY"),
     base_url="https://api.groq.com/openai/v1"
 )
 
@@ -22,7 +23,7 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 app = ApplicationBuilder().token(
-    "groq_api_key"
+    os.getenv("TELEGRAM_BOT_TOKEN")
 ).build()
 
 app.add_handler(
@@ -31,4 +32,3 @@ app.add_handler(
 
 print("Bot started!")
 app.run_polling()
-#githab test
