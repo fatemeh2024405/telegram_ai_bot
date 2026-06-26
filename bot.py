@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filte
 from openai import OpenAI
 
 print("start")
-print("GROQ:", os.getenv("GRQO_API_KEY"))
+print("GROQ:", repr(os.getenv("GROQ_API_KEY")))
 print("TOKEN:", os.getenv("TELEGRAM_BOT_TOKEN"))
 
 
