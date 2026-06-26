@@ -1,11 +1,12 @@
-print("start")
-print("GROQ:", os.getenv("GRQO_API_KEY"))
-print("TOKEN:", os.getenv("TELEGRAM_BOT_TOKEN"))
-
 import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 from openai import OpenAI
+
+print("start")
+print("GROQ:", os.getenv("GRQO_API_KEY"))
+print("TOKEN:",s os.getenv("TELEGRAM_BOT_TOKEN"))
+
 
 client = OpenAI(
     api_key=os.getenv("GROQ_API_KEY"),
